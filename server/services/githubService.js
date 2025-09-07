@@ -2,6 +2,7 @@ const { Octokit } = require('@octokit/rest');
 const NodeCache = require('node-cache');
 const fs = require('fs-extra');
 const path = require('path');
+const os = require('os');
 
 class GitHubService {
   constructor() {
@@ -11,10 +12,16 @@ class GitHubService {
     
     // Cache for 10 minutes (600 seconds)
     this.cache = new NodeCache({ stdTTL: 600 });
-    this.cacheDir = path.join(__dirname, '../../cache');
-    
-    // Ensure cache directory exists
-    fs.ensureDirSync(this.cacheDir);
+    // Use a writable directory in serverless environments
+    this.cacheDir = process.env.CACHE_DIR || path.join(os.tmpdir(), 'grdt-cache');
+
+    // Ensure cache directory exists (best-effort on serverless)
+    try {
+      fs.ensureDirSync(this.cacheDir);
+    } catch (err) {
+      // Read-only filesystem fallback: disable disk cache
+      this.cacheDir = null;
+    }
   }
 
   async getUserData(username, type) {
@@ -72,11 +79,13 @@ class GitHubService {
       this.cache.set(cacheKey, data);
       
       // Save to file cache
-      try {
-        const cacheFile = path.join(this.cacheDir, `${cacheKey}.json`);
-        await fs.writeJson(cacheFile, data);
-      } catch (error) {
-        console.warn(`Error writing cache file for ${cacheKey}:`, error.message);
+      if (this.cacheDir) {
+        try {
+          const cacheFile = path.join(this.cacheDir, `${cacheKey}.json`);
+          await fs.writeJson(cacheFile, data);
+        } catch (error) {
+          console.warn(`Error writing cache file for ${cacheKey}:`, error.message);
+        }
       }
 
       return data;
