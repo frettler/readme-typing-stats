@@ -57,9 +57,11 @@ router.get('/', async (req, res) => {
     const svg = svgGenerator.generateTypingAnimation(data.text, options);
 
     // Set appropriate headers
-    res.setHeader('Content-Type', 'image/svg+xml');
-    res.setHeader('Cache-Control', 'public, max-age=600'); // 10 minutes
+    res.setHeader('Content-Type', 'image/svg+xml; charset=utf-8');
+    // Cache for users and enable CDN caching on Vercel
+    res.setHeader('Cache-Control', 'public, max-age=600, s-maxage=600, stale-while-revalidate=60');
     res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Content-Disposition', 'inline');
     
     res.send(svg);
 
@@ -73,7 +75,7 @@ router.get('/', async (req, res) => {
       theme: 'dark'
     });
 
-    res.setHeader('Content-Type', 'image/svg+xml');
+    res.setHeader('Content-Type', 'image/svg+xml; charset=utf-8');
     res.status(500).send(errorSvg);
   }
 });
@@ -101,7 +103,7 @@ router.get('/preview', (req, res) => {
 
   const svg = svgGenerator.generateTypingAnimation(text, options);
 
-  res.setHeader('Content-Type', 'image/svg+xml');
+  res.setHeader('Content-Type', 'image/svg+xml; charset=utf-8');
   res.send(svg);
 });
 
