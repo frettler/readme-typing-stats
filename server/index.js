@@ -49,13 +49,10 @@ app.use((req, res) => {
   res.status(404).json({ error: 'Endpoint not found' });
 });
 
-// Only start the server when running locally. On Vercel, the app is exported.
-if (require.main === module && process.env.VERCEL !== '1') {
-  app.listen(PORT, () => {
-    console.log(`🚀 Server running on port ${PORT}`);
-    console.log(`📊 GitHub Dynamic Typing SVG service started`);
-  });
-}
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
+  console.log(`📊 GitHub Dynamic Typing SVG service started`);
+});
 
 module.exports = app;
 

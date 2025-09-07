@@ -11,24 +11,10 @@ class GitHubService {
     
     // Cache for 10 minutes (600 seconds)
     this.cache = new NodeCache({ stdTTL: 600 });
-    const defaultCacheDir = path.join(__dirname, '../../cache');
-    const vercelTmpDir = process.env.VERCEL ? path.join('/tmp', 'github-readme-dynamic-typing-cache') : null;
-    this.cacheDir = vercelTmpDir || defaultCacheDir;
+    this.cacheDir = path.join(__dirname, '../../cache');
     
-    try {
-      // Ensure cache directory exists
-      fs.ensureDirSync(this.cacheDir);
-    } catch (error) {
-      // Fallback to default project cache directory
-      this.cacheDir = defaultCacheDir;
-      try {
-        fs.ensureDirSync(this.cacheDir);
-      } catch (_) {
-        // Disable file caching if FS is not writable
-        this.cacheDir = null;
-        console.warn('File cache disabled: unable to ensure cache directory');
-      }
-    }
+    // Ensure cache directory exists
+    fs.ensureDirSync(this.cacheDir);
   }
 
   async getUserData(username, type) {
@@ -42,18 +28,16 @@ class GitHubService {
 
     // Try to get from file cache
     try {
-      if (this.cacheDir) {
-        const cacheFile = path.join(this.cacheDir, `${cacheKey}.json`);
-        if (await fs.pathExists(cacheFile)) {
-          const fileStats = await fs.stat(cacheFile);
-          const now = new Date();
-          const fileAge = (now - fileStats.mtime) / 1000; // age in seconds
-          
-          if (fileAge < 600) { // 10 minutes
-            cachedData = await fs.readJson(cacheFile);
-            this.cache.set(cacheKey, cachedData);
-            return cachedData;
-          }
+      const cacheFile = path.join(this.cacheDir, `${cacheKey}.json`);
+      if (await fs.pathExists(cacheFile)) {
+        const fileStats = await fs.stat(cacheFile);
+        const now = new Date();
+        const fileAge = (now - fileStats.mtime) / 1000; // age in seconds
+        
+        if (fileAge < 600) { // 10 minutes
+          cachedData = await fs.readJson(cacheFile);
+          this.cache.set(cacheKey, cachedData);
+          return cachedData;
         }
       }
     } catch (error) {
@@ -89,10 +73,8 @@ class GitHubService {
       
       // Save to file cache
       try {
-        if (this.cacheDir) {
-          const cacheFile = path.join(this.cacheDir, `${cacheKey}.json`);
-          await fs.writeJson(cacheFile, data);
-        }
+        const cacheFile = path.join(this.cacheDir, `${cacheKey}.json`);
+        await fs.writeJson(cacheFile, data);
       } catch (error) {
         console.warn(`Error writing cache file for ${cacheKey}:`, error.message);
       }
