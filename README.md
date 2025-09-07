@@ -2,16 +2,16 @@
 <img src="https://readme-typing-stats.vercel.app/typing/preview?text=GitHub+README+Dynamic+Stats&size=52&color=%23ffffff&width=600&height=52&user=github&type=commit&speed=150" alt="Title" />
 </div>
 
+
+<p align="center">
+  <img src="https://readme-typing-stats.vercel.app/typing/preview?text=Transform+your+GitHub+profile+into+a+living+dashboard&size=18&width=600&height=40&repeat=false&cursor=false" alt="Subtitle" />
+</p>
 <div align="center">
   
   [![GitHub Stars](https://img.shields.io/github/stars/Ratna-Babu/readme-typing-stats?style=for-the-badge&color=yellow)](https://github.com/your-username/github-readme-dynamic-typing)
   [![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
   [![Vercel](https://img.shields.io/badge/Powered%20by-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com)
 </div>
-
-<p align="center">
-  <img src="https://readme-typing-stats.vercel.app/typing/preview?text=Transform+your+GitHub+profile+into+a+living+dashboard&size=18&width=600&height=40&repeat=false&cursor=false" alt="Subtitle" />
-</p>
 <p align="center">⚡ Animated typing SVG that displays your live GitHub stats — commits, stars, followers, and more, typed out in real-time inside your README. Bring your GitHub profile to life with a typewriter effect that showcases your latest activity and stats dynamically. 🎉</p>
 
 ---
@@ -70,6 +70,7 @@ Just replace `YOUR_USERNAME` with your GitHub username:
 
 
 <summary><b>📝 Latest Commit Animation</b></summary>
+<br>
 
 ```markdown
 ![Latest Commit](https://readme-typing-stats.vercel.app/typing?user=octocat&type=commit&theme=dark&size=18&width=500)
@@ -82,6 +83,7 @@ Just replace `YOUR_USERNAME` with your GitHub username:
 
 
 <summary><b>⭐ Total Stars Counter</b></summary>
+<br>
 
 ```markdown
 ![Total Stars](https://readme-typing-stats.vercel.app/typing?user=facebook&type=stars&theme=ocean&size=20&width=450)
@@ -94,6 +96,7 @@ Just replace `YOUR_USERNAME` with your GitHub username:
 
 
 <summary><b>👥 Followers Display</b></summary>
+<br>
 
 ```markdown
 ![Followers](https://readme-typing-stats.vercel.app/typing?user=taylorotwell&type=followers&theme=forest&size=18&width=400)
@@ -106,6 +109,7 @@ Just replace `YOUR_USERNAME` with your GitHub username:
 
 
 <summary><b>🔀 Total Forks Showcase</b></summary>
+<br>
 
 ```markdown
 ![Total Forks](https://readme-typing-stats.vercel.app/typing?user=vuejs&type=forks&theme=sunset&size=16&width=420)
@@ -118,6 +122,7 @@ Just replace `YOUR_USERNAME` with your GitHub username:
 
 
 <summary><b>📦 Repository Count</b></summary>
+<br>
 
 ```markdown
 ![Public Repos](https://readme-typing-stats.vercel.app/typing?user=nodejs&type=repos&theme=light&size=17&width=440)
@@ -185,12 +190,6 @@ Use different cursor styles:
 
 We love contributions!
 
-## 📈 Project Stats
-
-<div align="center">
-  <img src="https://readme-typing-stats.vercel.app/typing?text=Built+with+❤️+by+the+community&size=16&color=58A6FF&width=435&height=40" alt="Footer" />
-</div>
-
 <div align="center">
   
   ![Contributors](https://img.shields.io/github/contributors/your-username/github-readme-dynamic-typing?style=flat-square)
@@ -200,28 +199,12 @@ We love contributions!
   
 </div>
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
-- Inspired by [github-readme-stats](https://github.com/anuraghazra/github-readme-stats)
-- SVG animations powered by SMIL
+- Inspired by [readme-typing-svg]([https://github.com/anuraghazra/github-readme-stats](https://github.com/DenverCoder1/readme-typing-svg))
 - GitHub API for real-time data
 - All our amazing contributors
-
-## 💬 Support & Community
-
-<div align="center">
-  
-  [![Discord](https://img.shields.io/badge/Discord-Join%20Server-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/your-server)
-  [![Twitter](https://img.shields.io/badge/Twitter-Follow-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/your-handle)
-  [![Sponsor](https://img.shields.io/badge/Sponsor-❤️-EA4AAA?style=for-the-badge&logo=github-sponsors&logoColor=white)](https://github.com/sponsors/your-username)
-  
-</div>
-
----
 
 <div align="center">
   <img src="https://readme-typing-stats.vercel.app/typing?text=Thanks+for+visiting!+⭐+Star+us+on+GitHub!&size=14&color=58A6FF&width=600&height=45" alt="Footer Message" />
