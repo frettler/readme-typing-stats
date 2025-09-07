@@ -1,6 +1,6 @@
 # 🎬 GitHub README Dynamic Typing
 
-Generate animated SVGs with typewriter effect using live GitHub data! Perfect for making your GitHub profile README more engaging and dynamic.
+Generate animated SVGs with typewriter effect using live GitHub data! Perfect for making your GitHub profile README more engaging and dynamic.z
 
 ![Demo](https://via.placeholder.com/600x100/0d1117/58a6ff?text=✨+Animated+GitHub+Stats+with+Typing+Effect+✨)
 
