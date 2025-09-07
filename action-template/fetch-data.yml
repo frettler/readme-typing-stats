@@ -1,0 +1,97 @@
+name: Fetch GitHub Data for Dynamic Typing SVG
+
+on:
+  schedule:
+    # Run every hour
+    - cron: '0 * * * *'
+  workflow_dispatch: # Allow manual trigger
+  push:
+    branches: [ main, master ]
+
+jobs:
+  fetch-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Fetch GitHub data
+      run: |
+        # Create data directory if it doesn't exist
+        mkdir -p .github/data
+        
+        # Get username from repository
+        USERNAME="${{ github.repository_owner }}"
+        
+        # Fetch user data using GitHub API
+        curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+             -H "Accept: application/vnd.github.v3+json" \
+             "https://api.github.com/users/$USERNAME" > user_data.json
+             
+        # Fetch repositories
+        curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+             -H "Accept: application/vnd.github.v3+json" \
+             "https://api.github.com/users/$USERNAME/repos?sort=pushed&per_page=10" > repos_data.json
+             
+        # Get latest commit from most recent repo
+        LATEST_REPO=$(cat repos_data.json | jq -r '.[0].name')
+        if [ "$LATEST_REPO" != "null" ]; then
+          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+               -H "Accept: application/vnd.github.v3+json" \
+               "https://api.github.com/repos/$USERNAME/$LATEST_REPO/commits?per_page=1" > commits_data.json
+        fi
+        
+        # Process data with Node.js script
+        node -e "
+        const fs = require('fs');
+        const userData = JSON.parse(fs.readFileSync('user_data.json', 'utf8'));
+        const reposData = JSON.parse(fs.readFileSync('repos_data.json', 'utf8'));
+        let commitsData = [];
+        
+        try {
+          commitsData = JSON.parse(fs.readFileSync('commits_data.json', 'utf8'));
+        } catch (e) {
+          console.log('No commits data found');
+        }
+        
+        const totalStars = reposData.reduce((sum, repo) => sum + repo.stargazers_count, 0);
+        const totalForks = reposData.reduce((sum, repo) => sum + repo.forks_count, 0);
+        
+        const data = {
+          username: userData.login,
+          followers: userData.followers,
+          publicRepos: userData.public_repos,
+          totalStars: totalStars,
+          totalForks: totalForks,
+          lastCommit: commitsData.length > 0 ? {
+            message: commitsData[0].commit.message,
+            repo: reposData[0].name,
+            date: commitsData[0].commit.author.date,
+            sha: commitsData[0].sha.substring(0, 7)
+          } : null,
+          lastUpdated: new Date().toISOString()
+        };
+        
+        fs.writeFileSync('.github/data/github-stats.json', JSON.stringify(data, null, 2));
+        console.log('GitHub data saved successfully!');
+        "
+        
+        # Clean up temporary files
+        rm -f user_data.json repos_data.json commits_data.json
+        
+    - name: Commit and push data
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .github/data/github-stats.json
+        git diff --staged --quiet || git commit -m "Update GitHub stats data [skip ci]"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+

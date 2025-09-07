@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - GitHub README Dynamic Typing</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0d1117;
+            color: #e6edf3;
+            padding: 2rem;
+            margin: 0;
+        }
+        .demo-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1 {
+            background: linear-gradient(135deg, #58a6ff, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 2rem;
+        }
+        .demo-examples {
+            display: grid;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .example {
+            background: #161b22;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #30363d;
+        }
+        .example h3 {
+            margin-bottom: 1rem;
+            color: #58a6ff;
+        }
+        .svg-demo {
+            background: #21262d;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-family: 'Monaco', 'Cascadia Code', monospace;
+            font-size: 14px;
+            color: #58a6ff;
+        }
+        .typing-animation {
+            display: inline-block;
+            animation: typing 3s steps(40, end), blink-cursor 0.75s step-end infinite;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid #58a6ff;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink-cursor {
+            from, to { border-color: transparent; }
+            50% { border-color: #58a6ff; }
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: #238636;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            background: #2ea043;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <h1>🎬 GitHub README Dynamic Typing - Demo</h1>
+        <p>Here are some examples of what the animated SVGs look like:</p>
+        
+        <div class="demo-examples">
+            <div class="example">
+                <h3>Latest Commit</h3>
+                <div class="svg-demo">
+                    <span class="typing-animation">Latest commit: Fix bug in authentication</span>
+                </div>
+            </div>
+            
+            <div class="example">
+                <h3>GitHub Stars</h3>
+                <div class="svg-demo">
+                    <span class="typing-animation" style="animation-delay: 1s;">Total Stars: 1,234</span>
+                </div>
+            </div>
+            
+            <div class="example">
+                <h3>Followers</h3>
+                <div class="svg-demo">
+                    <span class="typing-animation" style="animation-delay: 2s;">Followers: 567</span>
+                </div>
+            </div>
+        </div>
+        
+        <a href="/" class="back-link">← Back to Generator</a>
+    </div>
+</body>
+</html>

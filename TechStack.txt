@@ -1,0 +1,49 @@
+Best Tech Stack for Dynamic Data Typing SVG
+1. Backend Language & Framework
+
+Node.js + Express (or Fastify)
+✅ Non-blocking, fast for I/O (API calls, caching).
+✅ Easy deployment on Vercel/Render/Railway.
+✅ Huge ecosystem for SVG, caching, and GitHub API.
+🔹 Alternative: Python + FastAPI (cleaner, async-first, great for APIs).
+
+👉 Recommendation: Node.js + Express (because this project is very similar to readme-typing-svg which already uses Node, and easy for contributors).
+
+2. SVG Generation
+
+Generate SVG dynamically using templates:
+
+Handlebars / EJS (template engine for SVG strings).
+
+Or use plain string interpolation.
+
+Animation via <animate>, <tspan>, or <path>.
+
+👉 Recommendation: Start with string-based SVG templates (lighter, no dependencies).
+
+3. Data Layer (GitHub Data)
+
+GitHub GraphQL API (preferred over REST → fewer calls, more data at once).
+
+Authentication via GitHub PAT (Personal Access Token).
+
+For many users:
+
+MVP → Caching layer.
+
+Scalable → GitHub Actions JSON file.
+
+4. Caching Layer
+
+Prevent API overuse, improve performance.
+Options:
+
+Redis → Best for production (in-memory, distributed).
+
+SQLite / LowDB / JSON → Good for MVP, quick and simple.
+
+👉 Recommendation:
+
+MVP → In-memory + JSON file cache.
+
+Production → Redis.

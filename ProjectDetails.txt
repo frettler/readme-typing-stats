@@ -1,0 +1,168 @@
+Build a service that generates animated SVGs where text is typed out (like a typewriter effect), but instead of static lines, it uses live GitHub data (commits, stars, PRs, followers, etc.).
+
+Anyone should be able to embed it in their README like:
+
+<img src="https://your-service.com/typing?user=ratna-babu&type=commit" />
+
+
+And it will display something like:
+
+Latest commit: Fix bug in index.js
+
+🏗️ System Architecture
+1. Frontend (GitHub README user)
+
+User just includes an <img> tag in their README.
+
+Browser fetches SVG from your service.
+
+2. Backend Service (Your App)
+
+Written in Node.js/Express (or Python/FastAPI).
+
+Handles requests like /typing?user=octocat&type=commit.
+
+Does not return HTML → instead, it returns an SVG (Content-Type: image/svg+xml).
+
+3. Data Layer
+
+Two possible approaches:
+
+🔹 A. API Fetching with Caching (MVP)
+
+Fetch data from GitHub REST/GraphQL API.
+
+Cache results for 10 minutes per user/repo in Redis, SQLite, or memory.
+
+If multiple people request the same data, serve from cache (no extra GitHub calls).
+
+This handles hundreds of users without hitting limits.
+
+🔹 B. Pre-Generated JSON via GitHub Actions (Scalable for Many Users)
+
+Each user sets up a GitHub Action in their repo (we provide template).
+
+Action fetches GitHub data every hour/day and commits a data.json file.
+
+Your service just reads this JSON and animates it.
+
+✅ No API rate limits (GitHub Actions uses the user’s own token).
+
+✅ Unlimited scale, since your service doesn’t talk to GitHub directly.
+
+4. SVG Generator
+
+Core logic that converts dynamic text (commit message, star count, etc.) into an animated typing SVG.
+
+Uses <text>, <tspan>, <animate> inside SVG.
+
+Options for customization:
+
+color → text color
+
+size → font size
+
+cursor=true/false → show blinking cursor
+
+repeat=true/false → loop animation
+
+speed=50 → typing speed
+
+🚀 Features
+✅ Core Features
+
+Fetch GitHub data dynamically:
+
+Latest commit message
+
+Star count
+
+Fork count
+
+Follower count
+
+Pull request or issue stats
+
+Animate text with typing + deleting effect.
+
+Allow customization via query params (color, font, speed).
+
+✨ Advanced Features
+
+Multi-line typing (e.g., commit message → star count → followers → repeat).
+
+Different animation styles (typing, fade-in, glitch effect, circular typing).
+
+User themes (light/dark mode).
+
+Support for other data sources (weather, quotes, etc.).
+
+⚡ Example Use Cases
+
+Developer Portfolio
+
+Show live GitHub stats in README with animation:
+
+"Latest commit: Add feature X"
+
+"Repo Stars: 152"
+
+Team Projects
+
+Show last commit of a shared repo in the project README.
+
+Open Source Attractiveness
+
+Show star count with typing effect to make the project page engaging.
+
+🛠️ Deployment
+MVP
+
+Deploy on Vercel/Render/Railway → easy to scale globally.
+
+Add caching to avoid API rate limits.
+
+Scalable Version
+
+Encourage users to run a GitHub Action in their repo to generate data.json.
+
+Your service just reads JSON and animates it → no rate limit issues, works for thousands of users.
+
+📂 Project Structure
+dynamic-data-typing-svg/
+│
+├── server/               # Express/FastAPI backend
+│   ├── routes/           # API endpoints (/typing)
+│   ├── services/         # Data fetchers (GitHub API, cache, etc.)
+│   ├── svg/              # SVG template generator
+│   └── utils/            # Helpers (caching, formatting)
+│
+├── cache/                # Cache storage (Redis/SQLite/JSON)
+│
+├── action-template/      # GitHub Action workflow for users
+│   └── fetch-data.yml
+│
+└── README.md             # Docs for setup & usage
+
+🧑‍🤝‍🧑 User Workflow
+
+User finds your project and wants dynamic typing in their README.
+
+They copy an <img> link from your docs:
+
+<img src="https://your-service.com/typing?user=octocat&type=commit" />
+
+
+(Optional) If they want no limits, they set up your GitHub Action → generates data.json.
+
+Your service reads the data, generates animated SVG, and GitHub renders it.
+
+🌟 Why This Will Stand Out
+
+It’s first-of-its-kind (no project currently combines live GitHub data with typing animation).
+
+Developers love showing stats → you make it more engaging with animation.
+
+Scalable (can serve many users with caching + Actions approach).
+
+

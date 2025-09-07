@@ -1,0 +1,37 @@
+{
+  "name": "github-readme-dynamic-typing",
+  "version": "1.0.0",
+  "description": "Generate animated SVGs with typewriter effect using live GitHub data",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
+    "test": "node test/basic-test.js",
+    "setup": "node scripts/setup.js",
+    "postinstall": "node -e \"console.log('\\n🎉 Installation complete! Run npm run setup to configure the project.')\""
+  },
+  "keywords": [
+    "github",
+    "svg",
+    "animation",
+    "typing",
+    "readme",
+    "dynamic"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "@octokit/rest": "^20.0.2",
+    "node-cache": "^5.1.2",
+    "fs-extra": "^11.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
