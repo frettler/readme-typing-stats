@@ -1,17 +1,7 @@
+
 {
-  "version": 2,
-  "routes": [
-    { "src": "^/typing(?:/.*)?$", "dest": "/api/index.js" },
-    { "src": "^/api(?:/.*)?$", "dest": "/api/index.js" },
-    { "src": "/(.*)", "dest": "/$1" }
-  ],
-  "functions": {
-    "api/index.js": {
-      "maxDuration": 10,
-  "runtime": "nodejs@20.x"
-    }
-  },
-  "env": {
-    "NODE_ENV": "production"
-  }
+	"version": 2,
+	"routes": [
+		{ "src": "^/typing(?:/.*)?$", "dest": "/api/index.js" }
+	]
 }
