@@ -45,6 +45,9 @@
 
 ## ✨ Features
 
+Website: [Live](https://readme-typing-stats.vercel.app/)
+<img width="1355" height="815" alt="Screenshot 2025-09-07 182835" src="https://github.com/user-attachments/assets/1a037767-c2bf-4a4f-a6c7-6323e44237d1" />
+
 📝 Dynamic GitHub Data → Show latest commits, repo stars, followers, PR counts, etc.
 
 ⌨️ Typing Animation → Smooth typewriter effect with customizable speed and styles.
