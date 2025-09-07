@@ -4,15 +4,15 @@
 
 <div align="center">
   
-  [![GitHub Stars](https://img.shields.io/github/stars/your-username/github-readme-dynamic-typing?style=for-the-badge&color=yellow)](https://github.com/your-username/github-readme-dynamic-typing)
+  [![GitHub Stars](https://img.shields.io/github/stars/Ratna-Babu/readme-typing-stats?style=for-the-badge&color=yellow)](https://github.com/your-username/github-readme-dynamic-typing)
   [![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
   [![Vercel](https://img.shields.io/badge/Powered%20by-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com)
-  
 </div>
 
 <p align="center">
   <img src="https://readme-typing-stats.vercel.app/typing/preview?text=Transform+your+GitHub+profile+into+a+living+dashboard&size=18&width=600&height=40&repeat=false&cursor=false" alt="Subtitle" />
 </p>
+<p align="center">⚡ Animated typing SVG that displays your live GitHub stats — commits, stars, followers, and more, typed out in real-time inside your README. Bring your GitHub profile to life with a typewriter effect that showcases your latest activity and stats dynamically. 🎉</p>
 
 ---
 
@@ -43,17 +43,17 @@
   </table>
 </div>
 
-## 🎯 Why Dynamic Typing?
+## ✨ Features
 
-<img align="right" width="400" src="https://readme-typing-stats.vercel.app/typing/preview?text=Static+profiles+are+boring...&size=14&color=36BCF7&width=400&height=120" alt="Features" />
+📝 Dynamic GitHub Data → Show latest commits, repo stars, followers, PR counts, etc.
 
+⌨️ Typing Animation → Smooth typewriter effect with customizable speed and styles.
 
-- **📊 Real-time Data** - Always shows your latest GitHub activity
-- **🎨 Beautiful Themes** - 5 built-in themes to match your style
-- **⚡ Lightning Fast** - Optimized SVG generation with caching
-- **🔧 Highly Customizable** - Control every aspect of the animation
-- **📱 Responsive** - Looks great on all devices
-- **🌐 No JavaScript Required** - Pure SVG animations
+🎨 Customizable → Change text color, font size, cursor style, and more.
+
+🔄 Live Updates → Always up to date with your latest GitHub activity.
+
+🌍 Easy Embed → Just drop an <img> tag in your README, no setup needed.
 
 <br clear="right"/>
 
@@ -68,7 +68,7 @@ Just replace `YOUR_USERNAME` with your GitHub username:
 
 ### 🎭 Live Examples Gallery
 
-<details>
+
 <summary><b>📝 Latest Commit Animation</b></summary>
 
 ```markdown
@@ -78,9 +78,9 @@ Just replace `YOUR_USERNAME` with your GitHub username:
 <div align="center">
   <img src="https://readme-typing-stats.vercel.app/typing?user=octocat&type=commit&theme=dark&size=18&width=500" alt="Commit Example" />
 </div>
-</details>
 
-<details>
+
+
 <summary><b>⭐ Total Stars Counter</b></summary>
 
 ```markdown
@@ -90,9 +90,9 @@ Just replace `YOUR_USERNAME` with your GitHub username:
 <div align="center">
   <img src="https://readme-typing-stats.vercel.app/typing?user=facebook&type=stars&theme=ocean&size=20&width=450" alt="Stars Example" />
 </div>
-</details>
 
-<details>
+
+
 <summary><b>👥 Followers Display</b></summary>
 
 ```markdown
@@ -102,9 +102,9 @@ Just replace `YOUR_USERNAME` with your GitHub username:
 <div align="center">
   <img src="https://readme-typing-stats.vercel.app/typing?user=taylorotwell&type=followers&theme=forest&size=18&width=400" alt="Followers Example" />
 </div>
-</details>
 
-<details>
+
+
 <summary><b>🔀 Total Forks Showcase</b></summary>
 
 ```markdown
@@ -114,9 +114,9 @@ Just replace `YOUR_USERNAME` with your GitHub username:
 <div align="center">
   <img src="https://readme-typing-stats.vercel.app/typing?user=vuejs&type=forks&theme=sunset&size=16&width=420" alt="Forks Example" />
 </div>
-</details>
 
-<details>
+
+
 <summary><b>📦 Repository Count</b></summary>
 
 ```markdown
@@ -126,7 +126,7 @@ Just replace `YOUR_USERNAME` with your GitHub username:
 <div align="center">
   <img src="https://readme-typing-stats.vercel.app/typing?user=nodejs&type=repos&theme=light&size=17&width=440" alt="Repos Example" />
 </div>
-</details>
+
 
 
 ## ⚙️ Advanced Customization
@@ -169,108 +169,21 @@ Adjust the typing speed for different effects:
 
 ```markdown
 ![Fast Typing](https://readme-typing-stats.vercel.app/typing?user=YOUR_USERNAME&type=stars&speed=30)
-![Slow Typing](https://readme-typing-stats.vercel.app/typing?user=YOUR_USERNAME&type=followers&speed=100)
+![Slow Typing](https://readme-typing-stats.vercel.app/typing?user=YOUR_USERNAME&type=followers&speed=200)
 ```
 
 #### Custom Cursor
 Use different cursor styles:
 
 ```markdown
-![Block Cursor](https://readme-typing-stats.vercel.app/typing?user=YOUR_USERNAME&type=repos&cursor=█)
-![Pipe Cursor](https://readme-typing-stats.vercel.app/typing?user=YOUR_USERNAME&type=forks&cursor=|)
+![Block Cursor](https://readme-typing-stats.vercel.app/typing?user=YOUR_USERNAME&type=repos&cursor=true)
+![Pipe Cursor](https://readme-typing-stats.vercel.app/typing?user=YOUR_USERNAME&type=forks&cursor=false)
 ```
 
-## 🚢 Deploy Your Own Instance
-
-### One-Click Deploy
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/github-readme-dynamic-typing&env=GITHUB_TOKEN&envDescription=GitHub%20Personal%20Access%20Token%20for%20higher%20rate%20limits&envLink=https://github.com/settings/tokens)
-
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/your-username/github-readme-dynamic-typing)
-
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/your-username/github-readme-dynamic-typing)
-
-### Manual Setup
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/github-readme-dynamic-typing.git
-   cd github-readme-dynamic-typing
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-
-3. **Set up environment variables**
-   ```bash
-   cp .env.example .env
-   # Edit .env and add your GitHub token (optional, for higher rate limits)
-   ```
-
-4. **Run development server**
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-5. **Build for production**
-   ```bash
-   npm run build
-   npm start
-   ```
-
-## 🔌 API Reference
-
-### Base URL
-```
-https://readme-typing-stats.vercel.app/typing
-```
-
-### Endpoints
-
-#### GET `/typing`
-Returns an animated SVG with GitHub stats
-
-**Query Parameters:**
-- All parameters listed in the customization section above
-
-**Example Request:**
-```http
-GET /typing?user=octocat&type=commit&theme=dark
-```
-
-**Response:**
-```svg
-<svg>...</svg>
-```
-
-### Rate Limiting
-- **Without token:** 60 requests/hour
-- **With token:** 5000 requests/hour
 
 ## 🤝 Contributing
 
-We love contributions! Check out our [Contributing Guide](CONTRIBUTING.md) to get started.
-
-### Development Workflow
-
-1. Fork the repo
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-### Running Tests
-```bash
-npm test        # Run all tests
-npm run test:watch  # Run tests in watch mode
-npm run test:coverage  # Generate coverage report
-```
+We love contributions!
 
 ## 📈 Project Stats
 
