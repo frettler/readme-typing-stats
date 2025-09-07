@@ -193,15 +193,6 @@ Use different cursor styles:
 
 We love contributions!
 
-<div align="center">
-  
-  ![Contributors](https://img.shields.io/github/contributors/your-username/github-readme-dynamic-typing?style=flat-square)
-  ![Issues](https://img.shields.io/github/issues/your-username/github-readme-dynamic-typing?style=flat-square)
-  ![Pull Requests](https://img.shields.io/github/issues-pr/your-username/github-readme-dynamic-typing?style=flat-square)
-  ![Code Size](https://img.shields.io/github/languages/code-size/your-username/github-readme-dynamic-typing?style=flat-square)
-  
-</div>
-
 
 ## 🙏 Acknowledgments
 
@@ -210,5 +201,5 @@ We love contributions!
 - All our amazing contributors
 
 <div align="center">
-  <img src="https://readme-typing-stats.vercel.app/typing?text=Thanks+for+visiting!+⭐+Star+us+on+GitHub!&size=14&color=58A6FF&width=600&height=45" alt="Footer Message" />
+  <img src="https://readme-typing-stats.vercel.app/typing/preview?text=Thanks+for+visiting!+⭐+Star+us+on+GitHub!&size=14&width=600&height=45" alt="Footer Message" />
 </div>
