@@ -49,10 +49,12 @@ app.use((req, res) => {
   res.status(404).json({ error: 'Endpoint not found' });
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`📊 GitHub Dynamic Typing SVG service started`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`🚀 Server running on port ${PORT}`);
+    console.log(`📊 GitHub Dynamic Typing SVG service started`);
+  });
+}
 
 module.exports = app;
 
